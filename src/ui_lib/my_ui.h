@@ -2,8 +2,15 @@
 #define __MY_UI_H
 
 #include <windows.h>
+#include "win.h"
+#include "launch.h"
 
-void init_MyUi();
+typedef struct MyUI{
+    WndCtx* wnd;
+    HookCtx* hook;
+} MyUI;
+
+MyUI* createMyUi(char* title);
 void Run();
 
 #endif
